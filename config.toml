@@ -1,4 +1,0 @@
-baseURL = 'https://akashark.github.io/'
-languageCode = 'en-us'
-title = 'SharkerBlog'
-theme = 'hugo-PaperMod'
