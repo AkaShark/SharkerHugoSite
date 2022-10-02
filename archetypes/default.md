@@ -18,7 +18,6 @@ hidemeta: false
 disableShare: true 
 showbreadcrumbs: true 
 gitment: true
-slug: hugo-integrated-gitment-plugin
 ---
 
 
