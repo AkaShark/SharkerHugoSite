@@ -15,7 +15,6 @@ comments: true
 showToc: true 
 TocOpen: true 
 hidemeta: false 
-disableShare: true 
 showbreadcrumbs: true 
 ---
 
