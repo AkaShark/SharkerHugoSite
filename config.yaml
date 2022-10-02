@@ -39,7 +39,7 @@ languages:
         enabled: true
         title: "Sharker's Blog"
         subtitle: "Sharker Sharker "
-        imageUrl: "http://media.wjbbf.cn/Blog/blog_label.webp" 
+        imageUrl: "https://media.wjbbf.cn/Blog/blog_label.webp" 
         imageTitle: 
         imageWidth: 150
         imageHeight: 150
@@ -124,15 +124,15 @@ params:
 
     label:
       text: "Sharker’s Blog"
-      icon: "http://media.wjbbf.cn/Blog/blog_label.webp"
+      icon: "https://media.wjbbf.cn/Blog/blog_label.webp"
       iconHeight: 35
 
     assets:
-        favicon: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        favicon16x16: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        favicon32x32: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        apple_touch_icon: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        safari_pinned_tab: "http://media.wjbbf.cn/Blog/blog_label.webp"
+        favicon: "https://media.wjbbf.cn/Blog/blog_label.webp"
+        favicon16x16: "https://media.wjbbf.cn/Blog/blog_label.webp"
+        favicon32x32: "https://media.wjbbf.cn/Blog/blog_label.webp"
+        apple_touch_icon: "https://media.wjbbf.cn/Blog/blog_label.webp"
+        safari_pinned_tab: "https://media.wjbbf.cn/Blog/blog_label.webp"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
