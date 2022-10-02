@@ -54,23 +54,6 @@
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
-
-{{ if (.Params.gitment) }}
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-<script src="https://billts.site/js/gitment.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: '{{ .File.BaseFileName }}',  // 可选, 默认为 location.href
-    owner: 'AkaShark',
-    repo: 'Blog-comment',
-    oauth: {
-      client_id: '879518103b0e46992c01',
-      client_secret: 'ef97beb7d885b60c1e60f122ef99087688624f17',
-    }
-  })
-  gitment.render('git-comments')
-</script>
 {{ end }}
 
 {{- end }}{{/* end main */}}

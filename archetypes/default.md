@@ -17,7 +17,6 @@ TocOpen: true
 hidemeta: false 
 disableShare: true 
 showbreadcrumbs: true 
-gitment: true
 ---
 
 
