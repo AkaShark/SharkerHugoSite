@@ -18,9 +18,7 @@ showbreadcrumbs: true
 
 [第二章](https://book.flutterchina.club/chapter2/first_flutter_app.html#_2-1-1-%E5%88%9B%E5%BB%BAflutter%E5%BA%94%E7%94%A8%E6%A8%A1%E6%9D%BF)
 
-
 ## 路由管理
-
 ### MaterialPageRoute
 ```dart
 // 路由跳转
@@ -276,3 +274,76 @@ dependencies:
 ```
 
 问题他们这个不应该也有一个对于包的描述文件么，比如podspec之类的
+
+
+## 资源管理
+### 指定 assets
+```yaml
+flutter:
+  assets:
+    - assets/my_icon.png
+    - assets/background.png
+```
+assets指定应包含在应用程序中的文件， 每个 asset 都通过相对于pubspec.yaml文件所在的文件系统路径来标识自身的路径。asset 的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets 文件夹）
+
+### 加载文本assets
+* 通过rootBundle (opens new window)对象加载：每个Flutter应用程序都有一个rootBundle (opens new window)对象， 通过它可以轻松访问主资源包，直接使用package:flutter/services.dart中全局静态的rootBundle对象来加载asset即可。
+* 通过 DefaultAssetBundle (opens new window)加载：建议使用 DefaultAssetBundle (opens new window)来获取当前 BuildContext 的AssetBundle。 这种方法不是使用应用程序构建的默认 asset bundle，而是使父级 widget 在运行时动态替换的不同的 AssetBundle，这对于本地化或测试场景很有用。
+
+通常，可以使用DefaultAssetBundle.of()在应用运行时来间接加载 asset（例如JSON文件），而在widget 上下文之外，或其他AssetBundle句柄不可用时，可以使用rootBundle直接加载这些 asset，例如：
+
+### 加载图片
+主资源默认对应于1.0倍的分辨率图片。看一个例子：
+* …/my_icon.png
+* …/2.0x/my_icon.png
+* …/3.0x/my_icon.png
+在设备像素比率为1.8的设备上，.../2.0x/my_icon.png 将被选择。对于2.7的设备像素比
+率，.../3.0x/my_icon.png将被选择。
+
+如果未在Image widget上指定渲染图像的宽度和高度，那么Image widget将占用与主资源相同
+的屏幕空间大小。 也就是说，如果.../my_icon.png是72px乘72px，那么.../3.0x/
+my_icon.png应该是216px乘216px; 但如果未指定宽度和高度，它们都将渲染为72像素×72像素
+（以逻辑像素为单位）。
+
+pubspec.yaml中asset部分中的每一项都应与实际文件相对应，但主资源项除外。当主资源缺少某个资源时，会按分辨率从低到高的顺序去选择 ，也就是说1x中没有的话会在2x中找，2x中还没有的话就在3x中找。(可以不放1x的)
+
+```dart
+Widget build(BuildContext context) {
+  return DecoratedBox(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('graphics/background.png'),
+      ),
+    ),
+  );
+}
+```
+注意，AssetImage 并非是一个widget， 它实际上是一个ImageProvider，有些时候你可能期望直接得到一个显示图片的widget，那么你可以使用Image.asset()方法，如：
+```dart
+Widget build(BuildContext context) {
+  return Image.asset('graphics/background.png');
+}
+```
+使用默认的 asset bundle 加载资源时，内部会自动处理分辨率等，这些处理对开发者来说是无感知的。 (如果使用一些更低级别的类，如 ImageStream (opens new window)或 ImageCache (opens new window)时你会注意到有与缩放相关的参数)
+
+要加载依赖包中的图像，必须给AssetImage提供package参数。
+例如，假设您的应用程序依赖于一个名为“my_icons”的包，它具有如下目录结构：
+* …/pubspec.yaml
+* …/icons/heart.png
+* …/icons/1.5x/heart.png
+* …/icons/2.0x/heart.png
+* …etc.
+然后加载图像，使用:
+`AssetImage('icons/heart.png', package: 'my_icons')`
+`Image.asset('icons/heart.png', package: 'my_icons')`
+注意:包在使用本身的资源时也应该加上package参数来获取。
+
+ps: 
+* 与iOS中的类似，有Bundle类型，读取图片默认是处理scale，但是底层的API在处理图片的时候需要使用对应的scale处理
+* 对于启动页和图标图片的使用均是在原生平台下进行使用的
+
+### 多平台共享assets
+
+
+
+
