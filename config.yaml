@@ -38,8 +38,8 @@ languages:
       profileMode:
         enabled: true
         title: "Sharker's Blog"
-        subtitle: "Sharker Sharker "
-        imageUrl: "http://media.wjbbf.cn/Blog/blog_label.webp" 
+        subtitle: "Welcome Sharker’s Home"
+        imageUrl: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg" 
         imageTitle: 
         imageWidth: 150
         imageHeight: 150
@@ -124,15 +124,15 @@ params:
 
     label:
       text: "Sharker’s Blog"
-      icon: "http://media.wjbbf.cn/Blog/blog_label.webp"
+      icon: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
       iconHeight: 35
 
     assets:
-        favicon: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        favicon16x16: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        favicon32x32: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        apple_touch_icon: "http://media.wjbbf.cn/Blog/blog_label.webp"
-        safari_pinned_tab: "http://media.wjbbf.cn/Blog/blog_label.webp"
+        favicon: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
+        favicon16x16: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
+        favicon32x32: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
+        apple_touch_icon: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
+        safari_pinned_tab: "https://sharkerhub.oss-cn-beijing.aliyuncs.com/Obsidian/_e54cd8c1-3550-42f8-b5f0-6037d3ac4283.jpeg"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
