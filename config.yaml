@@ -17,7 +17,8 @@ buildExpired: false
 #googleAnalytics: UA-123-45 # 谷歌统计
 # Copyright: Sharker
 
-paginate: 15    # 每页显示的文章数
+pagination:
+    pagerSize: 15    # 每页显示的文章数
 
 minify:
     disableXML: true
@@ -35,7 +36,8 @@ languages:
       languageName: "English"
       # contentDir: content/english
       weight: 1
-      profileMode:
+      params:
+        profileMode:
         enabled: true
         title: "Sharker's Blog"
         subtitle: "Welcome Sharker’s Home"
@@ -182,7 +184,7 @@ privacy:
         disabled: false
         simple: true
 
-    twitter:
+    x:
         disabled: false
         enableDNT: true
         simple: true
@@ -198,6 +200,6 @@ privacy:
 services:
     instagram:
         disableInlineCSS: true
-    twitter:
+    x:
         disableInlineCSS: true
         
