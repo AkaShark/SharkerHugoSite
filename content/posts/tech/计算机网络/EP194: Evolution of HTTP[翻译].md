@@ -1,7 +1,7 @@
 ---
 title: "EP194: Evolution of HTTP[翻译]"
-date: 2025-12-21T23:40:26+08:00 
-lastmod: 2025-12-21T23:40:26+08:00 
+date: 2025-12-21T11:40:26+08:00 
+lastmod: 2025-12-21T11:40:26+08:00 
 author: ["Sharker"] 
 categories: 
 - 计算机网络
