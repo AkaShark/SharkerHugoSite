@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $posts := (where site.RegularPages "Type" "posts").ByDate.Reverse }}
+<section class="hero-section"><div class="hero-container"><div class="hero-content">
+  <div class="hero-text">
+    <p class="eyebrow">SHARKER'S DIGITAL GARDEN</p>
+    <h1 class="hero-title"><span class="hero-title-line1">{{ site.Params.heroTitleLine1 }}</span><span class="hero-title-line2">{{ site.Params.heroTitleLine2 }}</span></h1>
+    <p class="hero-subtitle">{{ site.Params.description }}</p>
+    <div class="hero-actions"><a class="primary-link" href="{{ "posts/" | relLangURL }}">浏览全部文章 <span aria-hidden="true">↗</span></a><a class="quiet-link" href="{{ "index.xml" | relLangURL }}">订阅 RSS</a></div>
+    <div class="hero-social">{{ partial "social-links.html" . }}</div>
+  </div>
+  <div class="hero-image"><img src="{{ (resources.Get "images/sharker-mark.svg").RelPermalink }}" class="hero-logo" width="320" height="320" alt="Sharker 的 S 标记"></div>
+</div></div></section>
+<div class="home-container">
+  <section class="channels" aria-label="文章栏目">
+    {{ range slice (dict "path" "tech" "name" "技术" "label" "01 / BUILD" "desc" "iOS、Go 与计算机基础。") (dict "path" "read" "name" "阅读" "label" "02 / LEARN" "desc" "把阅读转化为自己的理解。") (dict "path" "life" "name" "生活" "label" "03 / REFLECT" "desc" "关于行动、成长与日常。") }}
+    {{ $section := site.GetPage (printf "/posts/%s" .path) }}
+    <a class="channel-card" href="{{ $section.RelPermalink }}"><span class="eyebrow">{{ .label }}</span><h2>{{ .name }} <span aria-hidden="true">↗</span></h2><p>{{ .desc }}</p><span class="channel-count">{{ len $section.RegularPagesRecursive }} 篇文章</span></a>
+    {{ end }}
+  </section>
+  <section class="posts-section"><div class="section-heading"><div><p class="eyebrow">LATEST NOTES</p><h2 class="posts-title">最近更新</h2></div><a href="{{ "archives/" | relLangURL }}">{{ len $posts }} 篇积累 →</a></div>
+    <div class="posts-list">{{ range first 6 $posts }}{{ partial "post-card.html" (dict "page" . "limit" 3) }}{{ end }}</div>
+    <a class="all-posts-link" href="{{ "posts/" | relLangURL }}">查看全部文章 →</a>
+  </section>
+  <section class="series-section"><div class="section-heading"><div><p class="eyebrow">LEARNING IN PUBLIC</p><h2 class="posts-title">持续积累的专题</h2></div><a href="{{ "series/" | relLangURL }}">全部专题 →</a></div>
+    <div class="series-grid">{{ range site.Taxonomies.series.ByCount }}<a class="series-card" href="{{ .Page.RelPermalink }}"><h3>{{ .Page.Title }}</h3><p>{{ .Count }} 篇笔记 <span aria-hidden="true">↗</span></p></a>{{ end }}</div>
+  </section>
+</div>
+{{ end }}

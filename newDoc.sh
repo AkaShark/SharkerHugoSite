@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")"
-
-if [[ $# -ne 1 || "$1" != *.md || "$1" == /* || "/$1/" == *'/../'* ]]; then
-  echo '用法：./newDoc.sh "tech/我的新文章.md"'
-  exit 1
+# Keep the original one-argument command for existing habits.
+if [[ $# -eq 1 && "$1" == *.md && "$1" != /* && "/$1/" != *'/../'* ]]; then
+  hugo new content "posts/$1"
+else
+  python3 scripts/new_post.py "$@"
 fi
-hugo new content "posts/$1"

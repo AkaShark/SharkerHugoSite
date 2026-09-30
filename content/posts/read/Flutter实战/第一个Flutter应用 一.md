@@ -1,19 +1,15 @@
 ---
-title: "第一个Flutter应用 一"
-date: 2022-10-05T21:21:51+08:00 
-lastmod: 2022-10-05T21:21:51+08:00
-author: ["Sharker"] 
-categories: 
-- Flutter
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
+title: "Flutter 实战笔记 02：有状态与无状态组件"
+date: "2022-10-05T21:21:51+08:00"
+lastmod: "2022-10-05T21:21:51+08:00"
+url: "/en/posts/read/flutter实战/第一个flutter应用-一/"
+author: "Sharker"
+categories: ["阅读"]
+tags: ["Flutter", "Widget"]
+description: "理解 StatefulWidget、StatelessWidget 与组件生命周期。"
+draft: false
+series: ["Flutter 实战笔记"]
+series_order: 2
 ---
 
 [第二章](https://book.flutterchina.club/chapter2/first_flutter_app.html#_2-1-1-%E5%88%9B%E5%BB%BAflutter%E5%BA%94%E7%94%A8%E6%A8%A1%E6%9D%BF)

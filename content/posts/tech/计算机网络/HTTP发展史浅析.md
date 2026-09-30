@@ -1,25 +1,19 @@
 ---
-title: "HTTP发展史浅析"
-date: 2022-09-26T11:54:26+08:00 
-lastmod: 2022-09-26T11:54:26+08:00
-author: ["Sharker"] 
-categories: 
-- 计算机网络
-tags: 
-- HTTP1.0 HTTP2.0 HTTP3.0
-description: "HTTP发展史浅析"
-weight: 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-disableShare: true 
-showbreadcrumbs: true 
+title: "HTTP 发展史浅析"
+date: "2022-09-26T11:54:26+08:00"
+lastmod: "2022-09-26T11:54:26+08:00"
+url: "/en/posts/tech/计算机网络/http发展史浅析/"
+author: "Sharker"
+categories: ["技术"]
+tags: ["HTTP", "计算机网络"]
+description: "梳理 HTTP 各版本的特点、长连接与性能演进。"
+draft: false
+series: ["理解 HTTP"]
+series_order: 1
 ---
 
 
 # HTTP发展历程
-[TOC]
 ## HTTP协议版本
 - HTTP/0.9
 - HTTP/1.0

@@ -1,19 +1,15 @@
 ---
-title: "第一个Flutter应用 三"
-date: 2022-10-07T23:36:30+08:00 
-lastmod: 2022-10-07T23:36:30+08:00
-author: ["Sharker"] 
-categories: 
-- Flutter 
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
+title: "Flutter 实战笔记 04：路由管理"
+date: "2022-10-07T23:36:30+08:00"
+lastmod: "2022-10-07T23:36:30+08:00"
+url: "/en/posts/read/flutter实战/第一个flutter应用-三/"
+author: "Sharker"
+categories: ["阅读"]
+tags: ["Flutter", "路由"]
+description: "学习 MaterialPageRoute、页面跳转和路由传参。"
+draft: false
+series: ["Flutter 实战笔记"]
+series_order: 4
 ---
 
 [第二章](https://book.flutterchina.club/chapter2/first_flutter_app.html#_2-1-1-%E5%88%9B%E5%BB%BAflutter%E5%BA%94%E7%94%A8%E6%A8%A1%E6%9D%BF)

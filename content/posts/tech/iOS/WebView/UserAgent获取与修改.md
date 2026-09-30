@@ -1,21 +1,15 @@
 ---
-title: "UserAgent获取与修改"
-date: 2024-02-26T22:40:08+08:00 
-lastmod: 2024-02-26T22:40:08+08:00
-author: ["Sharker"] 
-categories: 
-- iOS WebView UA
-tags: 
-- UA 
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
+title: "WKWebView 的 User-Agent 获取与修改"
+date: "2024-02-26T22:40:08+08:00"
+lastmod: "2024-02-26T22:40:08+08:00"
+url: "/en/posts/tech/ios/webview/useragent获取与修改/"
+author: "Sharker"
+categories: ["技术"]
+tags: ["iOS", "WKWebView", "User-Agent"]
+description: "记录 WKWebView 中 User-Agent 的读取、设置与适配实践。"
+draft: false
+series: ["iOS 开发实践"]
+series_order: 2
 ---
 
 ## 背景

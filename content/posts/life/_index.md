@@ -1,4 +1,4 @@
 ---
 title: "生活"
-hidemeta: true
+description: "记录行动、工作与成长中的思考。"
 ---

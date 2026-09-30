@@ -1,20 +1,15 @@
 ---
-title: "EP194: Evolution of HTTP[翻译]"
-date: 2025-12-21T11:40:26+08:00 
-lastmod: 2025-12-21T11:40:26+08:00 
-author: ["Sharker"] 
-categories: 
-- 计算机网络
-tags: 
-- HTTP1.0 HTTP2.0 HTTP3.0
-description: "HTTP演进"
-weight: 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-disableShare: true 
-showbreadcrumbs: true 
+title: "HTTP 演进：从 HTTP/0.9 到 HTTP/3（译）"
+date: "2025-12-21T11:40:26+08:00"
+lastmod: "2025-12-21T11:40:26+08:00"
+url: "/en/posts/tech/计算机网络/ep194-evolution-of-http翻译/"
+author: "Sharker"
+categories: ["技术"]
+tags: ["HTTP", "计算机网络", "翻译"]
+description: "回顾 HTTP 各版本的发展，以及性能和传输方式的变化。"
+draft: false
+series: ["理解 HTTP"]
+series_order: 2
 ---
 
 这篇文章回顾了HTTP协议的发展历程，从HTTP/0.9到HTTP/3，强调了其在性能和实时性方面的改进，同时提到了服务器系统性能指标，如QPS、TPS、并发数和RT，讨论了Nginx的流行原因，还列出了一些重要的网络调试命令，以及集线器、交换机和路由器在网络中的作用。

@@ -1,0 +1,4 @@
+{{ $current := . }}
+{{ range .GetTerms "series" }}
+<section class="series-nav" aria-label="专题阅读"><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><ol>{{ range .RegularPages.ByParam "series_order" }}<li>{{ if eq .RelPermalink $current.RelPermalink }}<span aria-current="page">{{ .Title }}</span>{{ else }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</li>{{ end }}</ol></section>
+{{ end }}

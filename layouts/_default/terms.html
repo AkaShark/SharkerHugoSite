@@ -1,0 +1,1 @@
+{{ define "main" }}<div class="tags-page"><h1 class="tags-title">{{ .Title }}</h1><p class="tags-help">从一个主题开始，串起相关的笔记。</p><div class="series-grid">{{ range .Data.Terms.ByCount }}<a href="{{ .Page.RelPermalink }}" class="series-card"><h2>{{ .Page.Title }}</h2><p>{{ .Count }} 篇文章 →</p></a>{{ end }}</div></div>{{ end }}

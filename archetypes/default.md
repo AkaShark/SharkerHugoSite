@@ -1,20 +1,18 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }} 
+date: {{ .Date }}
 lastmod: {{ .Date }}
-author: ["Sharker"] 
-categories: 
-- 分类1
-tags: 
-- 标签1
+author: "Sharker"
+categories: ["技术"]
+tags: []
 description: ""
-weight: 
-slug: ""
 draft: true
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
 ---
 
+## 问题与背景
+
+## 分析与实践
+
+## 总结
+
+## 参考资料

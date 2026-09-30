@@ -6,6 +6,7 @@ if ! command -v hugo >/dev/null; then
   command -v brew >/dev/null || { echo '请先安装 Homebrew，或安装 Hugo 0.167.0 及以上版本。'; exit 1; }
   brew install hugo
 fi
+git submodule update --init themes/mana
 if [[ ! -e docs/.git ]]; then
   git submodule update --init docs
 fi

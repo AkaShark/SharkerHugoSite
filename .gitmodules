@@ -1,3 +1,6 @@
 [submodule "docs"]
 	path = docs
 	url = git@github.com:AkaShark/AkaShark.github.io.git
+[submodule "themes/mana"]
+	path = themes/mana
+	url = https://github.com/Livour/hugo-mana-theme.git

@@ -18,14 +18,10 @@ git -C docs pull --ff-only origin master
 
 # Build in isolation: a failed build must never overwrite the published checkout.
 echo '正在构建正式站点（不包含草稿）...'
-hugo --environment production --destination .build/site --cleanDestinationDir
-test -s .build/site/en/index.html
-test -s .build/site/en/index.json
-test -s .build/site/en/index.xml
-touch .build/site/.nojekyll
+make check
 
-# Keep legacy URLs from older deployments; never overwrite repository metadata.
-rsync -a --exclude='.git' --exclude='CNAME' .build/site/ docs/
+# This repository is generated output. Delete obsolete pages and assets while protecting Git and domain configuration.
+rsync -a --delete --exclude='.git' --exclude='CNAME' .build/site/ docs/
 git -C docs add --all
 if ! git -C docs diff --cached --quiet; then
   git -C docs commit -m "${1:-Publish blog $(date '+%Y-%m-%d %H:%M:%S %z')}"

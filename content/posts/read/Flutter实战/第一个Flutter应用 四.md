@@ -1,19 +1,15 @@
 ---
-title: "第一个Flutter应用 四"
-date: 2022-10-09T10:35:30+08:00 
-lastmod: 2022-10-09T10:35:30+08:00
-author: ["Sharker"] 
-categories: 
-- Flutter
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
+title: "Flutter 实战笔记 05：调试应用"
+date: "2022-10-09T10:35:30+08:00"
+lastmod: "2022-10-09T10:35:30+08:00"
+url: "/en/posts/read/flutter实战/第一个flutter应用-四/"
+author: "Sharker"
+categories: ["阅读"]
+tags: ["Flutter", "调试"]
+description: "整理日志、断点与 Flutter 应用调试方法。"
+draft: false
+series: ["Flutter 实战笔记"]
+series_order: 5
 ---
 
 [第二章](https://book.flutterchina.club/chapter2/first_flutter_app.html#_2-1-1-%E5%88%9B%E5%BB%BAflutter%E5%BA%94%E7%94%A8%E6%A8%A1%E6%9D%BF)

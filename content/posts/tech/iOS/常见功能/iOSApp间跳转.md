@@ -1,21 +1,15 @@
 ---
-title: "iOS App间跳转"
-date: 2024-03-27T20:41:10+08:00 
-lastmod: 2024-03-27T20:41:10+08:00
-author: ["Sharker"] 
-categories: 
-- iOS
-tags: 
-- iOS Scheme 应用间跳转
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-showbreadcrumbs: true 
+title: "iOS App 间跳转：URL Scheme 实践"
+date: "2024-03-27T20:41:10+08:00"
+lastmod: "2024-03-27T20:41:10+08:00"
+url: "/en/posts/tech/ios/常见功能/iosapp间跳转/"
+author: "Sharker"
+categories: ["技术"]
+tags: ["iOS", "URL Scheme"]
+description: "从 URL Scheme 基础到 App 相互唤起，整理 iOS 应用间跳转的实现。"
+draft: false
+series: ["iOS 开发实践"]
+series_order: 1
 ---
 
 ## 背景

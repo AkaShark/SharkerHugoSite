@@ -1,22 +1,13 @@
 ---
-title: "Xcode14新功能"
-date: 2022-09-28T21:20:22+08:00 
-lastmod: 2022-09-28T21:20:22+08:00
-author: ["Sharker"] 
-categories: 
-- 翻译
-tags: 
-- Xcode
-description: ""
-weight: 
-slug: ""
-draft: false 
-comments: true 
-showToc: true 
-TocOpen: true 
-hidemeta: false 
-disableShare: true 
-showbreadcrumbs: true 
+title: "Xcode 14 新功能笔记（译）"
+date: "2022-09-28T21:20:22+08:00"
+lastmod: "2022-09-28T21:20:22+08:00"
+url: "/en/posts/tech/翻译/xcode14新功能/"
+author: "Sharker"
+categories: ["技术"]
+tags: ["iOS", "Xcode", "翻译"]
+description: "记录 Xcode 14 发布时的功能变化，作为历史版本学习资料。"
+draft: false
 ---
 
 # What’s New in Xcode 14

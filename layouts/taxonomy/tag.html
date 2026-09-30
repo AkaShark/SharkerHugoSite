@@ -1,0 +1,57 @@
+{{ define "main" }}
+  {{ $allPosts := .RegularPagesRecursive }}
+{{ if eq .Kind "term" }}{{ $allPosts = .RegularPages }}{{ end }}
+{{ $allPosts = where $allPosts "Type" "posts" }}
+{{ $allPosts = $allPosts.ByDate.Reverse }}
+{{ if eq .Data.Singular "series" }}{{ $allPosts = $allPosts.ByParam "series_order" }}{{ end }}
+{{ $paginator := .Paginate $allPosts }}
+  {{ $allTags := slice }}
+  {{ range $allPosts }}
+    {{ if .Params.tags }}
+      {{ range .Params.tags }}
+        {{ $allTags = $allTags | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $uniqueTags := $allTags | uniq | sort }}
+  {{ $yearMonths := slice }}
+  {{ range $allPosts }}
+    {{ $yearMonth := .Date.Format "2006-01" }}
+    {{ $yearMonths = $yearMonths | append $yearMonth }}
+  {{ end }}
+  {{ $uniqueYearMonths := $yearMonths | uniq | sort }}
+
+
+  <div class="list-container">
+    <header class="list-header">
+      <h1 class="list-title">
+        <span class="list-title-line2">{{ .Title }}</span>
+      </h1>
+      {{ if .Description }}
+        <p class="list-description">{{ .Description }}</p>
+      {{ end }}
+      <p class="collection-count">共 {{ len $allPosts }} 篇文章</p>
+    </header>
+
+    <div class="posts-list">
+      {{ range $paginator.Pages }}
+        {{ $dataTags := "" }}
+        {{ if .Params.tags }}
+          {{ $dataTags = delimit .Params.tags "," }}
+        {{ end }}
+        {{ partial "post-card.html" (dict
+          "page" .
+          "limit" 3
+          "dataYearMonth" (.Date.Format "2006-01")
+          "dataTags" $dataTags)
+        }}
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ partial "pagination.html" . }}
+
+    <!-- Navigation links -->
+    {{ partial "back-to-home.html" . }}
+  </div>
+{{ end }}
