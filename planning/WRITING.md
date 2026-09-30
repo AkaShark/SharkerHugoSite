@@ -104,3 +104,21 @@ series_order: 3
 
 本主题的搜索改为全文索引，避免只能搜到正文开头；文章列表按栏目递归收录，
 避免多级目录只显示子目录；专题按 `series_order` 排序。主列表使用分页，筛选通过标签与专题入口完成。
+
+## GitHub 评论
+
+文章评论使用 [giscus](https://giscus.app/zh-CN)，存放在
+[AkaShark/SharkerHugoSite 的 Discussions](https://github.com/AkaShark/SharkerHugoSite/discussions) → Announcements 分类。
+
+- 首次启用：在 [giscus App 安装页](https://github.com/apps/giscus/installations/new) 选择 **Only select repositories**，仅授权 `AkaShark/SharkerHugoSite`。
+- 新文章默认启用评论；无需手工创建讨论，第一条评论或反应会触发创建。
+- 访客使用自己的 GitHub 账号登录；评论可在仓库 Discussions 中回复、管理或锁定。
+- 评论按文章 URL 路径匹配，并启用严格匹配。修改标题不会改变评论归属；发布后不要修改 `url`。
+- 某篇文章关闭评论：在 front matter 添加 `comments: false`，然后重新发布。已有讨论仍留在 GitHub。
+- 全站关闭：把 `config.yaml` 中 `params.giscus.enabled` 改为 `false`。
+- 首页、栏目页、关于页和草稿不加载评论。评论区跟随网站切换明暗主题。
+- 预览站与线上使用相同路径时会关联同一讨论，不要在本地预览提交测试评论。
+- 网站不保存 GitHub Token 或 Client Secret；仓库 ID 与分类 ID 是公开配置。
+
+若显示 `giscus is not installed on this repository`，请检查 App 是否已授权上述源码仓库，
+而不是仅授权 `AkaShark.github.io` 发布仓库。若无法连接 giscus，可使用评论区下方链接访问 GitHub。

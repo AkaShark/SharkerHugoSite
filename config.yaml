@@ -49,6 +49,13 @@ params:
   favicon: /favicon.svg
   enableIntegrity: true
   relatedPostsCount: 3
+  giscus:
+    enabled: true
+    repo: AkaShark/SharkerHugoSite
+    repoId: R_kgDOHuWhrw
+    category: Announcements
+    categoryId: DIC_kwDOHuWhr84DGwV-
+    lang: zh-CN
   footerText: 用文字沉淀思考 · Hugo & Mana
   custom404Message: 这篇内容可能已整理或移动，试试搜索或文章归档。
   rssAuthor:

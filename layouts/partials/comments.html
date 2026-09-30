@@ -1,0 +1,17 @@
+{{- $giscus := site.Params.giscus -}}
+{{- if and (eq .Section "posts") (not .Draft) $giscus.enabled (ne .Params.comments false) -}}
+<section class="post-comments" aria-labelledby="comments-title">
+  <h2 id="comments-title">评论与讨论</h2>
+  <p class="comments-note">欢迎交流、补充和纠错。登录 GitHub 后即可发表评论。</p>
+  <div class="giscus"
+       data-repo="{{ $giscus.repo }}"
+       data-repo-id="{{ $giscus.repoId }}"
+       data-category="{{ $giscus.category }}"
+       data-category-id="{{ $giscus.categoryId }}"
+       data-lang="{{ $giscus.lang | default "zh-CN" }}"></div>
+  <p class="comments-fallback">评论由 GitHub Discussions 提供。若加载不出来，可<a href="https://github.com/{{ $giscus.repo }}/discussions" target="_blank" rel="noopener noreferrer">前往 GitHub 查看讨论</a>。</p>
+  <noscript><p>启用 JavaScript 后可在此查看评论，或使用上方 GitHub 链接。</p></noscript>
+</section>
+{{- $script := resources.Get "js/comments.js" | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}" defer></script>
+{{- end -}}
