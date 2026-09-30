@@ -1,7 +1,9 @@
-#!/bin/sh 
-docPath="content/posts/"
-newDocPath=$1
-path=${docPath}${newDocPath}
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
 
-echo ${path}
-hugo new ${path}
+if [[ $# -ne 1 || "$1" != *.md || "$1" == /* || "/$1/" == *'/../'* ]]; then
+  echo '用法：./newDoc.sh "tech/我的新文章.md"'
+  exit 1
+fi
+hugo new content "posts/$1"

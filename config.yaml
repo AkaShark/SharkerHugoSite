@@ -1,6 +1,6 @@
 baseURL: https://akashark.github.io/
 # baseURL: https://www.sulvblog.cn  # 绑定的域名
-languageCode: zh-cn # en-us
+locale: zh-CN # en-us
 title: SharkerBlog
 theme: hugo-PaperMod # 主题名字，和themes文件夹下的一致
 
@@ -33,7 +33,7 @@ defaultContentLanguageInSubdir: true
 
 languages:
     en:
-      languageName: "English"
+      label: "English"
       # contentDir: content/english
       weight: 1
       params:
@@ -89,6 +89,9 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     # description: "这是一个纯粹的博客......"
     author: Sharker
+    rssAuthor:
+        name: Sharker
+        email: 1548742234@qq.com
     # author: ["Me", "You"] # multiple authors
     defaultTheme: auto  # defaultTheme: light or  dark 
     disableThemeToggle: false
